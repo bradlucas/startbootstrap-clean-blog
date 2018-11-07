@@ -20,7 +20,7 @@
     {% style "js/vendor/bootstrap/css/bootstrap.min.css" %}
 
     <!-- Custom fonts for this template -->
-    <link href="/js/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    {% style "js/vendor/fontawesome-free/css/all.min.css" %}
     <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
@@ -60,29 +60,6 @@
       </div>
     </nav>
 
-<!--
-    <div id="menucont" class="bodycontainer clearfix">
-        <div class="menutitle">
-            <p><span class="fa fa-reorder"></span><strong>Menu</strong></p>
-        </div>
-        <ul class="menu">
-            <li {% if home %} class="active" {% endif %}><a title="Home" href="{{index-uri}}">Home</a></li>
-            <li {% if archives %} class="active" {% endif %}><a title="Archives" href="{{archives-uri}}">Posts</a></li>
-            {% if tags|not-empty %}
-            <li {%ifequal uri tags-uri %} class="active" {% endifequal %}><a title="Tags" href="{{tags-uri}}">Tags</a></li>
-            <li {%ifequal uri tags-uri %} class="active" {% endifequal %}><a title="Tags" href="{{tags-uri}}ethereum">&nbsp;&nbsp;&nbsp;&nbsp; / Ethereum</a></li>
-            <li {%ifequal uri tags-uri %} class="active" {% endifequal %}><a title="Tags" href="{{tags-uri}}clojure">&nbsp;&nbsp;&nbsp;&nbsp; / Clojure</a></li>
-            <li {%ifequal uri tags-uri %} class="active" {% endifequal %}><a title="Tags" href="{{tags-uri}}python">&nbsp;&nbsp;&nbsp;&nbsp; / Python</a></li>
-            <li {%ifequal uri tags-uri %} class="active" {% endifequal %}><a title="Tags" href="{{tags-uri}}ads.txt">&nbsp;&nbsp;&nbsp;&nbsp; / Ads.txt</a></li>
-            {% endif %}
-            {% for nav-page in navbar-pa1ges %}
-            <li {%ifequal page.uri nav-page.uri %} class="active" {% endifequal %}>
-                <a href="{{nav-page.uri}}">{{nav-page.title}}</a>
-            </li>
-            {% endfor %}
-        </ul>
-    </div>
--->
 
     <!-- Page Header -->
     <header class="masthead" style="background-image: url('img/home-bg.jpg')">
@@ -157,13 +134,13 @@
     </footer>
 
     <!-- Bootstrap core JavaScript -->
-    <script src="/js/vendor/jquery/jquery.min.js"></script>
-    <script src="/js/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    {% script "js/vendor/jquery/jquery.min.js" %}
+    {% script "js/vendor/bootstrap/js/bootstrap.bundle.min.js" %}
 
     <!-- Custom scripts for this template -->
-    {% script "js/clean-blog.min.js"%}
-
+    {% script "js/clean-blog.min.js" %}
     {% script "js/highlight.pack.js" %}
+
     <script>hljs.initHighlightingOnLoad();</script>
 
 
