@@ -1,0 +1,46 @@
+<!--
+          <div class="post-preview">
+            <a href="post.html">
+              <h2 class="post-title">
+                Man must explore, and this is exploration at its greatest
+              </h2>
+              <h3 class="post-subtitle">
+                Problems look mighty small from 150 miles up
+              </h3>
+            </a>
+            <p class="post-meta">Posted by
+              <a href="#">Start Bootstrap</a>
+              on September 24, 2018</p>
+          </div>
+          <hr>
+-->
+
+{% extends "/html/base.html" %}
+{% block content %}
+<div id="post">
+    {% for post in posts %}
+    <div class="post-header">
+        <h1>{{post.title}}</h1>
+        <div id="post-meta">
+            {% if post.author %}
+            <div class="author">{{post.author}}</div>
+            {% endif %}
+            <strong>{{post.date|date:longDate}}</strong>
+        </div>
+    </div>
+    {{post.content|safe}}
+    <br/>
+    <a class="button" href="{{post.uri}}">Continue reading &#8594;</a>
+    <hr>
+    {% endfor %}
+
+    <div id="prev-next">
+        {% if prev-uri %}
+        <a class="button left" href="{{prev-uri}}">&laquo; Prev</a>
+        {% endif %}
+        {% if next-uri %}
+        <a class="button right" href="{{next-uri}}">Next &raquo;</a>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}
