@@ -1,19 +1,21 @@
 {% extends "/html/base.html" %}
 {%block subtitle %}: {{post.title}}{% endblock %}
 {% block content %}
+<!-- post -->
 <div id="post">
     {% include "/html/post-content.html" %}
+
     <div id="prev-next">
         {% if post.prev %}
-        <a class="button" href="{{post.prev.uri}}">&laquo; {{post.prev.title}}</a>
+        <a class="btn btn-secondary button" href="{{post.prev.uri}}">&laquo; {{post.prev.title}}</a>
         {% endif %}
         {% if post.next %}
-        <a class="right button" href="{{post.next.uri}}">{{post.next.title}} &raquo;</a>
+        <a class="btn btn-secondary right button" style="float: right" href="{{post.next.uri}}">{{post.next.title}} &raquo;</a>
         {% endif %}
     </div>
 
     {% if disqus-shortname %}
-    <div id="disqus_thread"></div>
+    <div id="disqus_thread" style="margin: 40px 0 0 0"></div>
     <script type="text/javascript">
         var disqus_config = function () {
             this.page.url = "{{site-url}}{{uri}}";

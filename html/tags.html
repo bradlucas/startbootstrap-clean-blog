@@ -1,11 +1,11 @@
 {% extends "/html/base.html" %}
 {%block subtitle %}: Tags{% endblock %}
+<!-- tags -->
 {% block content %}
 <div id="tags-page">
     <div id="page-header">
         <h1>Tags</h1>
     </div>
-
     <ul>
         {% for tag in tags %}
         <li><a href="{{tag.uri}}">{{tag.name}}</a></li>

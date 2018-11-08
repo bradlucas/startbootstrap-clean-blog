@@ -17,6 +17,7 @@
 
 {% extends "/html/base.html" %}
 {% block content %}
+<!-- previews -->
 <div id="post">
     {% for post in posts %}
     <div class="post-header">
@@ -30,16 +31,15 @@
     </div>
     {{post.content|safe}}
     <br/>
-    <a class="button" href="{{post.uri}}">Continue reading &#8594;</a>
+    <a class="btn btn btn-secondary button" href="{{post.uri}}">Continue reading &#8594;</a>
     <hr>
     {% endfor %}
-
     <div id="prev-next">
         {% if prev-uri %}
-        <a class="button left" href="{{prev-uri}}">&laquo; Prev</a>
+        <a class="btn btn-primary button left" href="{{prev-uri}}">&laquo; Prev</a>
         {% endif %}
         {% if next-uri %}
-        <a class="button right" href="{{next-uri}}">Next &raquo;</a>
+        <a class="btn btn-primary button right" style="float: right" href="{{next-uri}}">Next &raquo;</a>
         {% endif %}
     </div>
 </div>
