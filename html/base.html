@@ -16,15 +16,18 @@
     <meta name="keywords" content="clojure,clojurescript,datomic,functional,functional programming,blog,brad lucas, beacon hill">
 
     <!-- Bootstrap core CSS -->
-    {% style "js/vendor/bootstrap/css/bootstrap.min.css" %}
+    <!-- {% style "js/vendor/bootstrap/css/bootstrap.min.css" %} -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
     <!-- Custom fonts for this template -->
-    {% style "js/vendor/fontawesome-free/css/all.min.css" %}
+    <!-- {% style "js/vendor/fontawesome-free/css/all.min.css" %} -->
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
     <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
 
     <!-- Custom styles for this template -->
-    {% style "/css/clean-blog.css" %}
+    {% style "/css/clean-blog.min.css" %}
 
     <!-- highlight.js (https://highlightjs.org/) 
         https://highlightjs.org/download/
@@ -129,7 +132,7 @@
           <div class="col-lg-8 col-md-10 mx-auto">
             <ul class="list-inline text-center">
               <li class="list-inline-item">
-                <a href="https://twitter.com/bwlucas" target="_blank"">
+                <a href="https://twitter.com/bwlucas" target="_blank">
                   <span class="fa-stack fa-lg">
                     <i class="fas fa-circle fa-stack-2x"></i>
                     <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
@@ -161,8 +164,11 @@
     </footer>
 
     <!-- Bootstrap core JavaScript -->
-    {% script "js/vendor/jquery/jquery.min.js" %}
-    {% script "js/vendor/bootstrap/js/bootstrap.bundle.min.js" %}
+    <!-- {% script "js/vendor/jquery/jquery.min.js" %} -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <!-- {% script "js/vendor/bootstrap/js/bootstrap.bundle.min.js" %} -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js" integrity="sha384-pjaaA8dDz/5BgdFUPX6M/9SUZv4d12SUPF0axWc+VRZkx5xU3daN+lYb49+Ax+Tl" crossorigin="anonymous"></script>
 
     <!-- Custom scripts for this template -->
     {% script "js/clean-blog.min.js" %}
