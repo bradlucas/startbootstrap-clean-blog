@@ -57,9 +57,18 @@
             <li class="nav-item">
               <a class="nav-link" href="{{archives-uri}}">Posts</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="{{tags-uri}}">Tags</a>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="dropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Tags</a>
+                <ul class="dropdown-menu" aria-labelledby="dropdown1">
+                    <li class="dropdown-item"><a href="{{tags-uri}}">All</a></li>
+                    <li class="dropdown-divider"></li>
+                    <li class="dropdown-item"><a href="{{tags-uri}}ads.txt">Ads.txt</a></li>
+                    <li class="dropdown-item"><a href="{{tags-uri}}clojure">Clojure</a></li>
+                    <li class="dropdown-item"><a href="{{tags-uri}}ethereum">Ethereum</a></li>
+                    <li class="dropdown-item"><a href="{{tags-uri}}python">Python</a></li>
+                </ul>
             </li>
+
             <li class="nav-item">
               <a class="nav-link" href="/pages/about/">Author</a>
             </li>
